@@ -24,7 +24,7 @@ def execute_query(query, get='object'):
 
 		def decimal_default(obj):
 		    if isinstance(obj, decimal.Decimal):
-		        return float(obj)
+			return float(obj)
 		    raise TypeError
 
 		items = [dict(zip([key[0] for key in cursor.description], row) ) for row in _result]
